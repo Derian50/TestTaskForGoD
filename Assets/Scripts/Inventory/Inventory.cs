@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+
     public List<Item> itemList = new List<Item>();
 
     public List<int> quantityList = new List<int>();
@@ -94,6 +95,7 @@ public class Inventory : MonoBehaviour
         }
         
         UpdateInventoryUI();
+        SaveLoadData.instance.SavePlayerData();
     }
 
     public void RemoveItem(Item itemRemoved, int quantityRemoved)
@@ -124,6 +126,7 @@ public class Inventory : MonoBehaviour
             }
         }
         UpdateInventoryUI();
+        SaveLoadData.instance.SavePlayerData();
     }
 
 
