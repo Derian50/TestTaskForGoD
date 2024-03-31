@@ -47,6 +47,7 @@ public class SaveLoadData : MonoBehaviour
     {
         if (File.Exists(filePath))
         {
+
             string jsonData = File.ReadAllText(filePath);
             PlayerData data = JsonUtility.FromJson<PlayerData>(jsonData);
             Inventory.instance.itemList = data.itemList;
